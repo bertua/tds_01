@@ -12,5 +12,17 @@ public class IntercalarInv{
             }
         }
         System.out.println();
+
+        System.out.println();
+
+        for(int j = args.length - 1; j >= 0; j--){
+            if(j > 0){
+                System.out.print(args[j] + "-");
+            }
+            else {
+                System.out.print(args[j]);
+            }
+        }
+        System.out.println();
     }
 }
