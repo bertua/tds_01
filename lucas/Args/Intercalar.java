@@ -12,7 +12,6 @@ public class Intercalar{
             }
         }
         System.out.println();
-
         System.out.println();
 
         for(int j = 0; j < args.length; j++){
@@ -22,6 +21,24 @@ public class Intercalar{
             else {
                 System.out.print(args[j]);
             }
+        }
+        System.out.println();
+        System.out.println();
+
+        for(int k = 0; k < args.length; k++){
+            System.out.print(args[k]);
+            if(k < args.length -1){
+                System.out.print("-");
+            }
+
+        }
+        System.out.println();
+        System.out.println();
+
+        String a = "";
+        for(int l = 0; l < args.length; l++){
+            System.out.print(a + args[l]);
+            a = "-";
         }
         System.out.println();
     }

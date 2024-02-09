@@ -12,7 +12,6 @@ public class IntercalarInv{
             }
         }
         System.out.println();
-
         System.out.println();
 
         for(int j = args.length - 1; j >= 0; j--){
@@ -22,6 +21,23 @@ public class IntercalarInv{
             else {
                 System.out.print(args[j]);
             }
+        }
+        System.out.println();
+        System.out.println();
+
+         for(int k = args.length -1; k >= 0; k--){
+            System.out.print(args[k]);
+            if(k > 0){
+                System.out.print("-");
+            }
+        }
+        System.out.println();
+        System.out.println();
+
+        String a = "";
+        for(int l = args.length -1; l >= 0; l--){
+            System.out.print(a + args[l]);
+            a = "-";
         }
         System.out.println();
     }
