@@ -9,7 +9,7 @@ public class Ex14 {
                 ch = args[i].charAt(j);
                 for(int k = 0; k < vogais.length(); k++){
                     if(ch == vogais.charAt(k)){
-                    contagem++;
+                        contagem++;
                     }
                 }
                 if(contagem == 0){

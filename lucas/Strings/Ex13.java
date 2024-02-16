@@ -8,7 +8,7 @@ public class Ex13 {
                 ch = args[i].charAt(j);
                 for(int k = 0; k < vogais.length(); k++){
                     if(ch == vogais.charAt(k)){
-                    contagem++;
+                        contagem++;
                     }
                 }
             }
