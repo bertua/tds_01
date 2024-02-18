@@ -3,7 +3,7 @@ public class Ex15 {
         String inverter = "";
         for(int i = args.length -1; i >= 0; i--){
             for(int j = 0; j < args[i].length(); j++){
-            inverter = args[i].charAt(j) + inverter;
+                inverter = args[i].charAt(j) + inverter;
             }
             System.out.print(inverter);
             if(i > 0){
