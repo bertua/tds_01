@@ -1,3 +1,4 @@
+//Ler uma palavra e imprima-a de trás-para-frente
 public class Ex04 {
     public static void main(String[] args){
         String inverter = "";
