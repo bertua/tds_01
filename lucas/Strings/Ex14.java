@@ -11,6 +11,7 @@ public class Ex14 {
                 for(int k = 0; k < vogais.length(); k++){
                     if(ch == vogais.charAt(k)){
                         contagem++;
+                        break;
                     }
                 }
                 if(contagem == 0){
