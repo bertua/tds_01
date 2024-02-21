@@ -1,3 +1,4 @@
+//Leia n strings, imprima quantas letras tem a junção de todas elas
 public class Ex02 {
     public static void main(String[] args){
         String juntar = "";
