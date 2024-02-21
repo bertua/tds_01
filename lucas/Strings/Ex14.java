@@ -1,3 +1,4 @@
+//Ler uma frase e imprima-a sem as vogais
 public class Ex14 {
     public static void main(String[] args){
         String vogais = "AEIOUaeiou";
