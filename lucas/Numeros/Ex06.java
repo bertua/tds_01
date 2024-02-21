@@ -1,4 +1,4 @@
-//Crie um programa para verificar se os números informados são primo ou não
+//Crie um programa para verificar se os números informados são primos ou não
 public class Ex06{
     public static void main(String[] args){
         int numero;
