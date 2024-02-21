@@ -1,9 +1,9 @@
 //Escreva um programa para verificar se os números são pares ou ímpares
 public class Ex03{
     public static void main(String[] args){
-        double numero;
+        int numero;
         for(int i = 0; i < args.length; i++){
-            numero = Double.parseDouble(args[i]);
+            numero = Integer.parseInt(args[i]);
             if(numero % 2 == 0){
                 System.out.println("Par");
             } else {
