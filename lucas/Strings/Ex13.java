@@ -10,8 +10,8 @@ public class Ex13 {
                 for(int k = 0; k < vogais.length(); k++){
                     if(ch == vogais.charAt(k)){
                         contagem++;
+                        break;
                     }
-                    break;
                 }
             }
         }
