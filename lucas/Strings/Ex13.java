@@ -1,3 +1,4 @@
+//Ler uma frase e calcular quantas vogais possui
 public class Ex13 {
     public static void main(String[] args){
         int contagem = 0;
@@ -9,6 +10,7 @@ public class Ex13 {
                 for(int k = 0; k < vogais.length(); k++){
                     if(ch == vogais.charAt(k)){
                         contagem++;
+                        break;
                     }
                 }
             }
