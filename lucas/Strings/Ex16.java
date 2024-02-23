@@ -1,26 +1,28 @@
 public class Ex16{
     public static void main(String[] args){
-        String vogais = "aeiouAEIOU";
         char ch;
         int cont;
         for(int i = 0; i < args.length; i++){
+            System.out.print(i + ": ");
             for(int j = 0; j < args[i].length(); j++){
                 ch = args[i].charAt(j);
-                for(int k = 0; k < vogais.length(); k++){
-                    cont = 0;
-                    if(ch == vogais.charAt(k)){
-                        System.out.print(args[i].indexOf(ch));
-                        cont++;
-                    }
-                    if(cont > 0){
-                        System.out.print(" ");
-                    }
+                if(isVowel(ch)){
+                    System.out.print(args[i].indexOf(ch) + " ");
                 }
             }
-            if(i < args.length -1){
-                System.out.print(" ");
+            System.out.println();
+        }
+    }
+
+    public static boolean isVowel(char letra){
+        String vogais = "aeiouAEIOU";
+        for(int i = 0; i < vogais.length(); i++){
+            if(letra == vogais.charAt(i)){
+                return true;
             }
         }
-        System.out.println();
+        return false;
+
     }
+
 }
