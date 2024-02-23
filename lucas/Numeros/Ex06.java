@@ -9,18 +9,19 @@ public class Ex06{
             if(numero < 2){
                 System.out.println("Não é primo");
             }
-            check = 0;
-            for(int j = 2; j < numero; j++){
-                if(numero % j == 0){
-                    System.out.println("Não é primo");
-                    check++;
-                    break;
+            else {
+                check = 0;
+                for(int j = 2; j < numero; j++){
+                    if(numero % j == 0){
+                        System.out.println("Não é primo");
+                        check++;
+                        break;
+                    }
+                }
+                if(check == 0){
+                    System.out.println("É primo");
                 }
             }
-            if(check == 0){
-                System.out.println("É primo");
-            }
-
         }
     }
 }
