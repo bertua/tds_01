@@ -8,8 +8,7 @@ public class Ex06{
 
             if(numero < 2){
                 System.out.println("Não é primo");
-            }
-            else {
+            } else {
                 check = 0;
                 for(int j = 2; j < numero; j++){
                     if(numero % j == 0){
