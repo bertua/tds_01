@@ -2,20 +2,22 @@
 public class Ex06{
     public static void main(String[] args){
         int numero;
+        int check;
         for(int i = 0; i < args.length; i++){
             numero = Integer.parseInt(args[i]);
-
+            check = 0;
             if(numero < 2){
                 System.out.println("Não é primo");
             } else {
-                for(int j = 2; j <= numero; j++){
-                    if(numero % j == 0 && j != numero){
+                for(int j = 2; j < numero; j++){
+                    if(numero % j == 0){
                         System.out.println("Não é primo");
-                        break;
-                    } else {
-                        System.out.println("É primo");
+                        check++;
                         break;
                     }
+                }
+                if (check == 0){
+                    System.out.println("É primo");
                 }
             }
         }
