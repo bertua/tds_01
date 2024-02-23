@@ -8,3 +8,15 @@ public class Ex04 {
         System.out.println(inverter);
     }
 }
+
+/*
+public class Ex04 {
+    public static void main(String[] args){
+        String inverter = "";
+        for(int i = args[0].length() -1; i >= 0 ; i--){
+            inverter += args[0].charAt(i);
+        }
+        System.out.println(inverter);
+    }
+}
+*/
