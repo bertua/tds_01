@@ -1,5 +1,33 @@
 //Crie um programa para gerar a série de Fibonacci até um número dado
-import java.util.ArrayList;
+public class Ex08{
+    public static void main(String[] args){
+        int numero = Integer.parseInt(args[0]);
+        int a = 0, b = 1, c = 0;
+        for(int i = 0; i < numero; i++){
+            if(i == 0){
+                System.out.print(a + " ");
+            }
+            else if(i == 1){
+                System.out.print(b + " ");
+            }
+            else{
+                c = a + b;
+                System.out.print(c);
+                a = b;
+                b = c;
+
+                if(i < numero -1){
+                    System.out.print(" ");
+                }
+            }
+        }
+        System.out.println(" ");
+    }
+}
+
+
+
+/*import java.util.ArrayList;
 public class Ex08{
     public static void main(String[] args){
         int numero = Integer.parseInt(args[0]);
@@ -26,3 +54,4 @@ public class Ex08{
         System.out.println();
     }
 }
+*/
