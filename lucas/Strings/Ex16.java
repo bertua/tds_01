@@ -1,7 +1,6 @@
 public class Ex16{
     public static void main(String[] args){
         char ch;
-        int cont;
         for(int i = 0; i < args.length; i++){
             System.out.print(i + ": ");
             for(int j = 0; j < args[i].length(); j++){
