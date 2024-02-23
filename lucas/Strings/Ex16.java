@@ -1,8 +1,8 @@
+//Ler n strings e exbir as posições das vogais encontradas
 public class Ex16{
     public static void main(String[] args){
         char ch;
         int cont;
-        int k;
         for(int i = 0; i < args.length; i++){
             System.out.print(i + ": ");
             cont = 0;
@@ -13,14 +13,13 @@ public class Ex16{
                 }
             }
             
-            k = 0;
             for(int j = 0; j < args[i].length(); j++){
                 ch = args[i].charAt(j);
                 if(isVowel(ch)){
                     System.out.print(args[i].indexOf(ch));
-                    if(k < cont -1){
+                    if(cont > 1){
                         System.out.print(",");
-                        k++;
+                        cont--;
                     }
                 }
             }
