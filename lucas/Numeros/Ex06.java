@@ -9,7 +9,7 @@ public class Ex06{
             if(numero < 2){
                 System.out.println("Não é primo");
             } else {
-                for(int j = 2; j < numero; j++){
+                for(int j = 2; j <= Math.sqrt(numero); j++){
                     if(numero % j == 0){
                         System.out.println("Não é primo");
                         check++;
