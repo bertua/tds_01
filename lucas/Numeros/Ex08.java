@@ -5,17 +5,25 @@ public class Ex08{
         int a = 0, b = 1, c = 0;
         for(int i = 0; i < numero; i++){
             if(i == 0){
-                System.out.print(a + " ");
+                System.out.print(a);
+
+                if(i < numero -1){
+                    System.out.print(" ");
+                }
             }
             else if(i == 1){
-                System.out.print(b + " ");
+                System.out.print(b);
+
+                if(i < numero -1){
+                    System.out.print(" ");
+                }
             }
             else{
                 c = a + b;
                 System.out.print(c);
                 a = b;
                 b = c;
-
+                
                 if(i < numero -1){
                     System.out.print(" ");
                 }
