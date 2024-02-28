@@ -3,8 +3,8 @@ public class Ex15 {
     public static void main(String[] args){
         for(int i = args.length -1; i >= 0; i--){
             String inverter = "";
-            for(int j = 0; j < args[i].length(); j++){
-                inverter = args[i].charAt(j) + inverter;
+            for(int j = args[i].length() -1; j >= 0 ; j--){
+                inverter += args[0].charAt(j);
             }
             System.out.print(inverter);
             if(i > 0){
