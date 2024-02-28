@@ -2,7 +2,7 @@
 public class Ex19{
     public static void main(String[] args){
         int cont;
-        String palavra = args[0];
+        String palavra = args[0].toUpperCase();
         String recons = "";
         for(int i = 0; i < palavra.length(); i++){
             cont = 0;
