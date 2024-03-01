@@ -7,20 +7,17 @@ public class Ex06{
             numero = Integer.parseInt(args[i]);
             check = 0;
             if(numero < 2){
-                System.out.print(args[i] + " ");
-                System.out.println("Não é primo");
+                System.out.println(args[i] + " Não é primo");
             } else {
                 for(int j = 2; j <= Math.sqrt(numero); j++){
                     if(numero % j == 0){
-                        System.out.print(args[i] + " ");
-                        System.out.println("Não é primo");
+                        System.out.println(args[i] + " Não é primo");
                         check++;
                         break;
                     }
                 }
                 if (check == 0){
-                    System.out.print(args[i] + " ");
-                    System.out.println("É primo");
+                    System.out.println(args[i] + " É primo");
                 }
             }
         }
