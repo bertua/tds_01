@@ -9,7 +9,7 @@ public class Ex05{
             for(int j = numero; j > 1; j--){
                 fatorial *= j;
             }
-            System.out.println(fatorial);
+            System.out.println(numero + "! " + fatorial);
         }
     }
 }
