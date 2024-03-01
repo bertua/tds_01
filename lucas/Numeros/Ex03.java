@@ -5,9 +5,9 @@ public class Ex03{
         for(int i = 0; i < args.length; i++){
             numero = Integer.parseInt(args[i]);
             if(numero % 2 == 0){
-                System.out.println("Par");
+                System.out.println(numero + " Par");
             } else {
-                System.out.println("Ímpar");
+                System.out.println(numero + " Ímpar");
             }
         }
     }
