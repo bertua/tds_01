@@ -5,7 +5,7 @@ public class Ex07{
         for(int i = 0; i < args.length; i++){
             int numero = Integer.parseInt(args[i]);
             double raiz = Math.sqrt(numero);
-            System.out.println(numero + " = " + raiz);
+            System.out.println(numero + " " + raiz);
         }
     }
 }
