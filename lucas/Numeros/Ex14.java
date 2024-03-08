@@ -1,7 +1,12 @@
 public class Ex14{
     public static void main(String[] args){
         double a = Double.parseDouble(args[0]);
-        double b = Double.parseDouble(args[2]);
+        double b;
+        if(args.length < 3){
+            b = 0;
+        } else {
+            b = Double.parseDouble(args[2]);
+        }
         Calcular calc = new Calcular(a,b);
         switch(args[1]){
             case "+":
@@ -68,7 +73,7 @@ class Calcular{
     public double potencia(){
         return Math.pow(this.n1, this.n2);
     }
-    public double fatorial(){
+    public long fatorial(){
         long fatorial = 1l;
         for(double j = this.n1; j > 1; j--){
             fatorial *= j;
