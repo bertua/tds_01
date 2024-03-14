@@ -20,4 +20,12 @@ public class ItemDoPedido{
         return this.valor;
     }
 
+    public String getSabor(){
+        return this.sabor;
+    }
+
+    public String getTipo(){
+        return this.tipo;
+    }
+
 }
