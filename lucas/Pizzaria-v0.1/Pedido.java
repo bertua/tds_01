@@ -24,15 +24,15 @@ public class Pedido{
         System.out.println("              Pizzaria             ");
         System.out.println("              Bate-Papo            ");
         System.out.println("-----------------------------------");
-        System.out.println("Cliente: " + this.cliente);
+        System.out.println("Cliente     : " + this.cliente);
         System.out.println("-----------------------------------");
-        System.out.println("Tipo: " + this.itemDoPedido.getTipo());
-        System.out.println("Sabor: " + this.itemDoPedido.getSabor());
-        System.out.println("Valor: " + this.itemDoPedido.getValor());
+        System.out.println("Tipo        : " + this.itemDoPedido.getTipo());
+        System.out.println("Sabor       : " + this.itemDoPedido.getSabor());
+        System.out.println("Valor       : " + this.itemDoPedido.getValor());
         System.out.println("-----------------------------------");
-        System.out.println("Taxa Entrega: " + this.taxaEntrega);
+        System.out.println("Tx. Entrega : " + this.taxaEntrega);
         System.out.println("-----------------------------------");
-        System.out.println("Total: " + this.getTotal());
+        System.out.println("Total       : " + this.getTotal());
         System.out.println("-----------------------------------");
     }
 
