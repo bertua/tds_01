@@ -1,4 +1,3 @@
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 public class Pedido{
     private ArrayList<String> produtos = new ArrayList<>();
@@ -62,6 +61,7 @@ public class Pedido{
         System.out.println("----------------------------------------");
         System.out.println(this.formatar("Frete", String.valueOf(this.frete)));
         System.out.println(this.formatar("Total", String.valueOf(this.total + this.frete)));
+        System.out.println("----------------------------------------");
     }
 
     private String formatar(String titulo, String item){
