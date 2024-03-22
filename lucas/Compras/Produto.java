@@ -23,4 +23,8 @@ public class Produto{
         return this.preco;
     }
 
+    public String getDescricao(){
+        return this.descricao;
+    }
+
 }
