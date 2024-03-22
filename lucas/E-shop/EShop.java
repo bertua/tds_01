@@ -60,5 +60,6 @@ public class EShop{
         input.nextLine();
 
         pedido.imprimir();
+        input.close();
     }
 }
