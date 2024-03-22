@@ -46,7 +46,7 @@ public class EShop{
             pedido.addDescricoes(produto.getDescricao());
             pedido.setTotal(produto.getPreco());
 
-            System.out.print("> continuar à comprar? ");
+            System.out.print("> continuar a comprar? ");
             continuar = input.nextLine();
             System.out.println();
 
