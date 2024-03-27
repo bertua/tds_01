@@ -5,13 +5,11 @@ public class EShop{
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         Usuario usuario = new Usuario();
-        Produto produto = new Produto();
         Pedido pedido = new Pedido();
 
         LocalDateTime data = LocalDateTime.now();
         DateTimeFormatter formatData = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        String dataFormatada = data.format(formatData);
-        pedido.setData(dataFormatada);
+        pedido.setData(data.format(formatData));
 
         System.out.println("Login");
 
@@ -26,10 +24,10 @@ public class EShop{
         System.out.println();
 
         pedido.setCliente(usuario);
-        pedido.setProduto(produto);
 
         String continuar;
         do{
+            Produto produto = new Produto();
             System.out.print("Produto: ");
             produto.setNomeP(input.nextLine());
 
@@ -40,11 +38,9 @@ public class EShop{
             System.out.print("Descricao: ");
             produto.setDescricao(input.nextLine());
 
-
-            pedido.addProduto(produto.getNomeP());
-            pedido.addPrecos(produto.getPreco());
-            pedido.addDescricoes(produto.getDescricao());
             pedido.setTotal(produto.getPreco());
+
+            pedido.addProduto(produto);
 
             System.out.print("> continuar a comprar? ");
             continuar = input.nextLine();
@@ -58,6 +54,11 @@ public class EShop{
         System.out.print("Frete: ");
         pedido.setFrete(input.nextDouble());
         input.nextLine();
+
+        pedido.setTotal(pedido.getFrete());
+        
+        System.out.print("Pagamento: ");
+        pedido.setPagamento(input.nextLine());
 
         pedido.imprimir();
         input.close();
