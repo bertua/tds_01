@@ -21,7 +21,9 @@ public class Pizzaria{
             item.setValor(input.nextDouble());
             input.nextLine();
 
-            pedido.adicionarItem(item);
+            pedido.addItem(item);
+            
+            pedido.setTotal(item.getValor());
 
             System.out.println("> mais alguma coisa?");
             continuar = input.nextLine();
@@ -33,6 +35,9 @@ public class Pizzaria{
 
         System.out.print("Taxa de entrega: ");
         pedido.setTaxaDeEntrega(input.nextDouble());
+        input.nextLine();
+
+        pedido.setTotal(pedido.getTaxaDeEntrega());
 
         pedido.imprimir();
     }

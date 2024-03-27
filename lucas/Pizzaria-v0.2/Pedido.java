@@ -1,10 +1,12 @@
+import java.util.ArrayList;
 public class Pedido{
     private double taxaEntrega;
-    private ItemDoPedido itemDoPedido;
+    private ArrayList<ItemDoPedido> itemDoPedido = new ArrayList<>();
     private String cliente;
+    private double total = 0;
 
-    public void adicionarItem(ItemDoPedido item){
-        this.itemDoPedido = item;
+    public void addItem(ItemDoPedido item){
+        this.itemDoPedido.add(item);
     }
 
     public void setCliente(String nome){
@@ -15,8 +17,12 @@ public class Pedido{
         this.taxaEntrega = taxaEntrega;
     }
 
-    public double getTotal(){
-        return this.taxaEntrega + this.itemDoPedido.getValor();
+    public double getTaxaDeEntrega(){
+        return this.taxaEntrega;
+    }
+
+    public void setTotal(double total){
+        this.total += total;
     }
 
     public void imprimir(){
@@ -26,13 +32,16 @@ public class Pedido{
         System.out.println("----------------------------------------");
         System.out.println(formatar("Cliente", this.cliente));
         System.out.println("----------------------------------------");
-        System.out.println(formatar("Tipo", this.itemDoPedido.getTipo()));
-        System.out.println(formatar("Sabor", this.itemDoPedido.getSabor()));
-        System.out.println(formatar("Valor", String.valueOf(this.itemDoPedido.getValor())));
+        for(int i = 0; i < itemDoPedido.size(); i++){
+            System.out.println(formatar("Tipo", this.itemDoPedido.get(i).getTipo()));
+            System.out.println(formatar("Sabor", this.itemDoPedido.get(i).getSabor()));
+            System.out.println(formatar("Valor", String.valueOf(this.itemDoPedido.get(i).getValor())));
+            System.out.println("");
+        }
         System.out.println("----------------------------------------");
         System.out.println(formatar("Tx. Entrega", String.valueOf(this.taxaEntrega)));
         System.out.println("----------------------------------------");
-        System.out.println(formatar("Total", String.valueOf(this.getTotal())));
+        System.out.println(formatar("Total", String.valueOf(this.total)));
         System.out.println("----------------------------------------");
     }
 
