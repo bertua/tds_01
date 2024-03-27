@@ -43,6 +43,7 @@ public class Pedido{
 
 
     public void imprimir(){
+        System.out.println("");
         System.out.println("----------------------------------------");
         System.out.println("                 E-Shop                 ");
         System.out.println("----------------------------------------");
