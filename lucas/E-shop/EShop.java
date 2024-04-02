@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -26,14 +27,23 @@ public class EShop{
         pedido.setCliente(usuario);
 
         String continuar;
+        boolean digitouErrado;
         do{
             Produto produto = new Produto();
             System.out.print("Produto: ");
             produto.setNomeP(input.nextLine());
 
-            System.out.print("Preço: ");
-            produto.setPreco(input.nextDouble());
-            input.nextLine();
+            do{
+                try{
+                    System.out.print("Preço: ");
+                    produto.setPreco(input.nextDouble());
+                    digitouErrado = false;
+                } catch (InputMismatchException e){
+                    System.err.println("DIGITOU ERRADO");
+                    digitouErrado = true;
+                }
+                input.nextLine();
+            } while (digitouErrado);
 
             System.out.print("Descricao: ");
             produto.setDescricao(input.nextLine());
@@ -51,9 +61,18 @@ public class EShop{
         System.out.print("Endereço: ");
         pedido.setEndereco(input.nextLine());
 
-        System.out.print("Frete: ");
-        pedido.setFrete(input.nextDouble());
-        input.nextLine();
+
+        do{
+            try{
+                System.out.print("Frete: ");
+                pedido.setFrete(input.nextDouble());
+                digitouErrado = false;
+            } catch (InputMismatchException e){
+                System.err.println("DIGITOU ERRADO");
+                digitouErrado = true;
+            }
+            input.nextLine();
+        }while (digitouErrado);
 
         pedido.setTotal(pedido.getFrete());
         
