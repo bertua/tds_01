@@ -48,6 +48,7 @@ public class Mecanica{
 
         ordemServico.imprimir();
 
-        
+        input.close();
+
     }
 }
