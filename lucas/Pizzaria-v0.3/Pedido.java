@@ -10,6 +10,10 @@ public class Pedido{
         this.itemDoPedido.add(item);
     }
 
+    public ArrayList<ItemDoPedido> getItem(){
+        return this.itemDoPedido;
+    }
+
     public void setCliente(String nome){
         this.cliente = nome;
     }
@@ -30,6 +34,10 @@ public class Pedido{
 
     public void setTotal(double total){
         this.total += total;
+    }
+
+    public double getTotal(){
+        return this.total;
     }
 
     public void setBairro(String bairro){

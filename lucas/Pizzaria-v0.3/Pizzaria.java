@@ -8,6 +8,7 @@ public class Pizzaria{
         System.out.println("2.Imprimir histórico");
         System.out.println("#.Sair");
         String menu = input.nextLine();
+        Faturamento faturamento = new Faturamento();
 
         while(true){
             if(menu.equals("#")){
@@ -17,7 +18,7 @@ public class Pizzaria{
             switch(menu){
                 case "1":
                     Pedido pedido = new Pedido();
-                
+
                     String continuar;
                     do{
                         ItemDoPedido item = new ItemDoPedido();
@@ -43,10 +44,14 @@ public class Pizzaria{
                     System.out.print("Bairro: ");
                     pedido.setBairro(input.nextLine().trim());
                     pedido.setTaxaDeEntrega(pedido.getBairro());
-        
                     pedido.setTotal(pedido.getTaxaDeEntrega());
-        
-                    pedido.imprimir();
+
+
+                    faturamento.setTotalMotoboy(pedido.getTaxaDeEntrega());
+                    faturamento.setTotalGeral(pedido.getTotal());
+                    faturamento.setTotalLiquido(faturamento.getTotalGeral() - faturamento.setTotalMotoboy());
+
+                    faturamento.addPedido(pedido);
                     break;
 
                 case "2":
@@ -58,5 +63,6 @@ public class Pizzaria{
             System.out.println("#.Sair");
             menu = input.nextLine();
         }
+        input.close();
     }
 }
