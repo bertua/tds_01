@@ -32,6 +32,8 @@ public class Pizzaria{
                         pedido.addItem(item);
                         
                         pedido.setTotal(item.getValor());
+
+                        faturamento.qtdPizzas();
         
                         System.out.println("> mais alguma coisa?");
                         continuar = input.nextLine().trim();

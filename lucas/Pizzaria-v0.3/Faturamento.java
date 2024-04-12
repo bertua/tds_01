@@ -5,6 +5,7 @@ public class Faturamento{
     private double totalLiquido = 0;
     private ArrayList<Pedido> pedido = new ArrayList<>();
     private Pedido boleto;
+    private int qtdPizzas;
 
     public void setBoleto(Pedido boleto){
         this.boleto = boleto;
@@ -34,15 +35,24 @@ public class Faturamento{
         this.pedido.add(pedido);
     }
 
+    public void qtdPizzas(){
+        qtdPizzas++;
+    }
+
+
     public void imprimirHistorico(){
         System.out.println("----------------------------------------");
         System.out.println("                 Pizzaria               ");
         System.out.println("                 Luigi's                ");
         System.out.println("----------------------------------------");
+        int pedidos = 0;
         for(int i = 0; i < pedido.size(); i++){
             pedido.get(i).imprimir();
+            pedidos++;
         }
         System.out.println("----------------------------------------");
+        System.out.println(boleto.formatar("Pedidos realizados", String.valueOf(pedidos)));
+        System.out.println(boleto.formatar("Qtd. Pizzas", String.valueOf(this.qtdPizzas)));
         System.out.println(boleto.formatar("Total Geral", String.valueOf(this.totalGeral)));
         System.out.println(boleto.formatar("Total Motoboy", String.valueOf(this.totalMotoboy)));
         System.out.println(boleto.formatar("Total Liquido", String.valueOf(this.totalLiquido)));
