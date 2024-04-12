@@ -4,6 +4,11 @@ public class Faturamento{
     private double totalMotoboy = 0;
     private double totalLiquido = 0;
     private ArrayList<Pedido> pedido = new ArrayList<>();
+    private Pedido boleto;
+
+    public void setBoleto(Pedido boleto){
+        this.boleto = boleto;
+    }
 
     public void setTotalGeral(double totalGeral){
         this.totalGeral += totalGeral;
@@ -21,23 +26,26 @@ public class Faturamento{
         return this.totalMotoboy;
     }
 
-    public void setTotalLiquido(double totalLiquido){
-        this.totalLiquido += totalLiquido;
+    public void setTotalLiquido(){
+        this.totalLiquido = this.totalGeral - this.totalMotoboy;
     }
 
-    public void addPedido(ArrayList<Pedido> pedido){
-        this.pedido = pedido;
+    public void addPedido(Pedido pedido){
+        this.pedido.add(pedido);
     }
 
     public void imprimirHistorico(){
         System.out.println("----------------------------------------");
+        System.out.println("                 Pizzaria               ");
+        System.out.println("                 Luigi's                ");
+        System.out.println("----------------------------------------");
         for(int i = 0; i < pedido.size(); i++){
-            System.out.println(pedido.get(i).imprimir());
+            pedido.get(i).imprimir();
         }
         System.out.println("----------------------------------------");
-        System.out.println(pedido.formatar("Total Geral", this.totalGeral));
-        System.out.println(pedido.formatar("Total Motoboy", this.totalMotoboy));
-        System.out.println(pedido.formatar("Total Liquido", this.totalLiquido));
+        System.out.println(boleto.formatar("Total Geral", String.valueOf(this.totalGeral)));
+        System.out.println(boleto.formatar("Total Motoboy", String.valueOf(this.totalMotoboy)));
+        System.out.println(boleto.formatar("Total Liquido", String.valueOf(this.totalLiquido)));
         System.out.println("----------------------------------------");
     }
 

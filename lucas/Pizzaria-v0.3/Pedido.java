@@ -40,6 +40,10 @@ public class Pedido{
         return this.total;
     }
 
+    public void resetTotal(){
+        this.total = 0;
+    }
+
     public void setBairro(String bairro){
         this.bairro = bairro;
     }
@@ -49,19 +53,9 @@ public class Pedido{
     }
 
     public void imprimir(){
-        System.out.println("----------------------------------------");
-        System.out.println("                 Pizzaria               ");
-        System.out.println("                 Luigi's                ");
-        System.out.println("----------------------------------------");
         System.out.println(formatar("Cliente", this.cliente));
-        System.out.println("----------------------------------------");
         for(int i = 0; i < itemDoPedido.size(); i++){
-            System.out.println(formatar("Tipo", this.itemDoPedido.get(i).getTipo()));
-            System.out.println(formatar("Sabor", this.itemDoPedido.get(i).getSabor()));
-            System.out.println(formatar("Valor", String.valueOf(this.itemDoPedido.get(i).getValor())));
-            if(i < itemDoPedido.size() -1){
-                System.out.println("");
-            }
+            System.out.println(formatar("", this.itemDoPedido.get(i).getTipo() + " " + this.itemDoPedido.get(i).getSabor() + " R$" + String.valueOf(this.itemDoPedido.get(i).getValor())));
         }
         System.out.println("----------------------------------------");
         System.err.println(formatar("Bairro", this.bairro));
@@ -71,7 +65,7 @@ public class Pedido{
         System.out.println("----------------------------------------");
     }
 
-    private static String formatar(String titulo, String item){
+    public static String formatar(String titulo, String item){
         String div = "----------------------------------------";
         int finalDiv = div.length() -1;
         int finalItem = titulo.length() + item.length() -1;

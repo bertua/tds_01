@@ -46,15 +46,16 @@ public class Pizzaria{
                     pedido.setTaxaDeEntrega(pedido.getBairro());
                     pedido.setTotal(pedido.getTaxaDeEntrega());
 
-
+                    faturamento.setBoleto(pedido);
+                    faturamento.addPedido(pedido);
                     faturamento.setTotalMotoboy(pedido.getTaxaDeEntrega());
                     faturamento.setTotalGeral(pedido.getTotal());
-                    faturamento.setTotalLiquido(faturamento.getTotalGeral() - faturamento.setTotalMotoboy());
+                    faturamento.setTotalLiquido();
 
-                    faturamento.addPedido(pedido);
                     break;
 
                 case "2":
+                    faturamento.imprimirHistorico();
                     break;
             }
             System.out.println("Selecione:");
