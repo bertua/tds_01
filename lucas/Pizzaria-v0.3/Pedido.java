@@ -55,7 +55,7 @@ public class Pedido{
     public void imprimir(){
         System.out.println(formatar("Cliente", this.cliente));
         for(int i = 0; i < itemDoPedido.size(); i++){
-            System.out.println(formatar("", this.itemDoPedido.get(i).getTipo() + " " + this.itemDoPedido.get(i).getSabor() + " R$" + String.valueOf(this.itemDoPedido.get(i).getValor())));
+            System.out.println(formatar("", this.itemDoPedido.get(i).getTipo() + " " + this.itemDoPedido.get(i).getSabor() + " " + String.valueOf(this.itemDoPedido.get(i).getValor())));
         }
         System.out.println("----------------------------------------");
         System.err.println(formatar("Bairro", this.bairro));
