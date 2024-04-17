@@ -6,6 +6,7 @@ public class Pizzaria{
         System.out.println("Selecione:");
         System.out.println("1.Pedido");
         System.out.println("2.Imprimir histórico");
+        System.out.println("3.Imprimir pedido");
         System.out.println("#.Sair");
         String menu = input.nextLine();
         Faturamento faturamento = new Faturamento();
@@ -57,12 +58,21 @@ public class Pizzaria{
                     break;
 
                 case "2":
+                    faturamento.imprimirCabecalho();
                     faturamento.imprimirHistorico();
                     break;
+
+                case "3":
+                    System.out.print("Qual pedido: ");
+                    int nPedido = input.nextInt();
+                    input.nextLine();
+                    faturamento.imprimirCabecalho();
+                    faturamento.imprimirPedido(nPedido);
             }
             System.out.println("Selecione:");
             System.out.println("1.Pedido");
             System.out.println("2.Imprimir histórico");
+            System.out.println("3: Imprimir pedido");
             System.out.println("#.Sair");
             menu = input.nextLine();
         }

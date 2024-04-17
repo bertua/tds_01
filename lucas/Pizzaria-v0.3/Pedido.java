@@ -52,7 +52,8 @@ public class Pedido{
         return this.bairro;
     }
 
-    public void imprimir(){
+    public void imprimir(int n){
+        System.out.println("Pedido nº: " + n);
         System.out.println(formatar("Cliente", this.cliente));
         for(int i = 0; i < itemDoPedido.size(); i++){
             System.out.println(formatar("", this.itemDoPedido.get(i).getTipo() + " " + this.itemDoPedido.get(i).getSabor() + " " + String.valueOf(this.itemDoPedido.get(i).getValor())));
@@ -62,6 +63,7 @@ public class Pedido{
         System.out.println(formatar("Tx. Entrega", String.valueOf(this.taxaEntrega)));
         System.out.println("----------------------------------------");
         System.out.println(formatar("Total", String.valueOf(this.total)));
+        System.out.println("----------------------------------------");
         System.out.println("----------------------------------------");
     }
 
